@@ -1,2 +1,1 @@
-# metrics-prometheus-vhost
-Prometheus metrics vhost
+# metrics-prometheus

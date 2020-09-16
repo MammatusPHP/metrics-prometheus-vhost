@@ -1,0 +1,9 @@
+parameters:
+	ignoreErrors:
+		- '#Method getAttribute\(\) in anonymous class has parameter \$default with null as default value.#'
+	ergebnis:
+		classesAllowedToBeExtended:
+			- Rx\Subject\Subject
+
+includes:
+	- vendor/wyrihaximus/test-utilities/rules.neon
