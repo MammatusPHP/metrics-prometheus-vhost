@@ -19,6 +19,8 @@ use const WyriHaximus\Constants\HTTPStatusCodes\OK;
  */
 final class MetricsHandler
 {
+    private const RESPONSE_HEADERS = ['Content-Type' => 'text/plain'];
+
     private Registry $registry;
 
     public function __construct(Registry $registry)
@@ -28,6 +30,6 @@ final class MetricsHandler
 
     public function handle(FetchMetrics $query): ResponseInterface
     {
-        return new Response(OK, [], $this->registry->print(new Prometheus()));
+        return new Response(OK, self::RESPONSE_HEADERS, $this->registry->print(new Prometheus()));
     }
 }
