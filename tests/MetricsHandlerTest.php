@@ -7,7 +7,7 @@ namespace Mammatus\Tests\Vhost\Metrics\Prometheus;
 use Chimera\Input;
 use Mammatus\Vhost\Metrics\Prometheus\FetchMetrics;
 use Mammatus\Vhost\Metrics\Prometheus\MetricsHandler;
-use WyriHaximus\Metrics\InMemory\Registry;
+use WyriHaximus\Metrics\Factory;
 use WyriHaximus\Metrics\Label;
 use WyriHaximus\Metrics\Label\Name;
 use WyriHaximus\TestUtilities\TestCase;
@@ -38,7 +38,7 @@ final class MetricsHandlerTest extends TestCase
                 return [];
             }
         };
-        $registry = new Registry();
+        $registry = Factory::create();
         $registry->counter('name', 'description', new Name('key'))->counter(new Label('key', 'value'))->incrBy(123);
         $metricsHandler = new MetricsHandler($registry);
 
