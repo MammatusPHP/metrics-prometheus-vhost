@@ -12,8 +12,8 @@ use React\Http\Message\Response;
 use const WyriHaximus\Constants\HTTPStatusCodes\PERMANENT_REDIRECT;
 
 /**
- * @Vhost("healthz")
- * @FetchEndpoint(app="healthz", path="/", query=FetchIndex::class, name="FetchIndex")
+ * @Vhost("metrics")
+ * @FetchEndpoint(app="metrics", path="/", query=FetchIndex::class, name="FetchIndex")
  */
 final class IndexHandler
 {
