@@ -27,4 +27,9 @@ final class MetricsVhost implements Vhost
     {
         return new NoWebroot();
     }
+
+    public function middleware(): iterable
+    {
+        yield from [];
+    }
 }
