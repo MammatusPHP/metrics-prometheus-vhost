@@ -13,19 +13,24 @@ final class MetricsVhost implements Vhost
     private const SERVER_NAME = 'metrics';
     private const LISTEN_PORT = 7331;
 
-    public function port(): int
+    public static function port(): int
     {
         return self::LISTEN_PORT;
     }
 
-    public function name(): string
+    public static function name(): string
     {
         return self::SERVER_NAME;
     }
 
-    public function webroot(): Webroot
+    public static function webroot(): Webroot
     {
         return new NoWebroot();
+    }
+
+    public static function maxConcurrentRequests(): ?int
+    {
+        return null;
     }
 
     public function middleware(): iterable
