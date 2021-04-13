@@ -14,8 +14,8 @@ use WyriHaximus\Metrics\Registry;
 use const WyriHaximus\Constants\HTTPStatusCodes\OK;
 
 /**
- * @Vhost("metrics")
- * @FetchEndpoint(app="metrics", path="/metrics", query=FetchMetrics::class, name="FetchMetrics")
+ * @Vhost("prometheus-metrics")
+ * @FetchEndpoint(app="prometheus-metrics", path="/metrics", query=FetchMetrics::class, name="FetchMetrics")
  */
 final class MetricsHandler
 {

@@ -10,7 +10,7 @@ use Mammatus\Http\Server\Webroot\NoWebroot;
 
 final class MetricsVhost implements Vhost
 {
-    private const SERVER_NAME = 'metrics';
+    private const SERVER_NAME = 'prometheus-metrics';
     private const LISTEN_PORT = 7331;
 
     public static function port(): int
