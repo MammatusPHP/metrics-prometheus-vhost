@@ -12,8 +12,8 @@ use React\Http\Message\Response;
 use const WyriHaximus\Constants\HTTPStatusCodes\PERMANENT_REDIRECT;
 
 /**
- * @Vhost("metrics")
- * @FetchEndpoint(app="metrics", path="/", query=FetchIndex::class, name="FetchIndex")
+ * @Vhost("prometheus-metrics")
+ * @FetchEndpoint(app="prometheus-metrics", path="/", query=FetchIndex::class, name="FetchIndex")
  */
 final class IndexHandler
 {
